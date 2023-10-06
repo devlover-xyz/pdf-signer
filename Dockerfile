@@ -1,5 +1,7 @@
 # Base Image
-FROM loyaltyone/docker-alpine-java-node:jre-8-node-8
+# FROM loyaltyone/docker-alpine-java-node:jre-8-node-8
+FROM timbru31/java-node:11-jre-16
+
 
 # Environments
 ENV APP="/opt/api"

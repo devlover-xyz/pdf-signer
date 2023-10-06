@@ -1,12 +1,16 @@
 version: '3'
 
 services:
-    assinador-pdf:
-        image: ekiametis/pdf-signer:latest
+    app:
+        # image: ekiametis/pdf-signer:latest
+        platform: linux/arm64
+        build: .
+        image: pdf-signer
         ports:
             - "4000:8080"
         volumes:
           - './keys:/run/secrets'
+          - './storage:/opt/api/tmp'
         environment:
             PORT: 8080
             PUBLIC_KEY_FILE_PATH: '/run/secrets/public.pub'
