@@ -3,7 +3,7 @@ version: '3'
 services:
     app:
         # image: ekiametis/pdf-signer:latest
-        platform: linux/arm64
+        # platform: linux/arm64
         build: .
         image: pdf-signer
         ports:
